@@ -1,5 +1,5 @@
 import Image from "next/image";
-import {Check, Heart} from "lucide-react";
+import {Check} from "lucide-react";
 import {ButtonLink} from "@/components/ui/ButtonLink";
 import {atmosphereSceneImage, telegramUrl} from "@/data/site";
 
@@ -16,14 +16,17 @@ export function WowMoment() {
       <div aria-hidden className="absolute left-0 top-0 h-px w-full bg-gradient-to-r from-transparent via-sakura/60 to-transparent" />
       <div aria-hidden className="grain-layer absolute inset-0" />
 
-      <div className="section-shell relative grid min-h-[640px] items-center gap-10 py-24 lg:grid-cols-[0.92fr_1.08fr]">
+      <div className="section-shell relative grid min-h-[600px] items-center gap-10 py-20 lg:grid-cols-[0.92fr_1.08fr]">
         <div className="max-w-4xl">
-          <p className="text-xs uppercase tracking-[0.32em] text-sakura">Один экран, чтобы сбить ровный ритм</p>
-          <h2 className="mt-7 max-w-4xl text-balance font-display text-5xl leading-[1.02] text-bone sm:text-6xl lg:text-7xl">
-            Сайт должен не просто открыться. Он должен <span className="text-sakura">оставить ощущение.</span>
+          <p className="text-xs uppercase tracking-[0.32em] text-sakura">Первое впечатление о проекте</p>
+          <h2 className="mt-6 max-w-4xl text-balance font-display text-4xl leading-[1.04] text-bone sm:text-5xl lg:text-6xl">
+            Сайт должен<br />
+            не просто выглядеть красиво,<br />
+            а <span className="text-sakura">удерживать внимание</span>
           </h2>
           <p className="mt-5 max-w-2xl text-lg leading-8 text-muted">
-            Иногда именно <span className="text-sakura">атмосфера решает</span>, останется человек внутри проекта или закроет вкладку.
+            Первое впечатление формируется ещё до того,<br />
+            как человек начинает читать текст.
           </p>
           <div className="mt-7 flex">
             <ButtonLink href={telegramUrl} variant="ghost">
@@ -32,7 +35,7 @@ export function WowMoment() {
           </div>
         </div>
 
-        <div className="relative min-h-[440px] lg:min-h-[520px]">
+        <div className="relative min-h-[420px] lg:min-h-[480px]">
           <div
             aria-hidden
             className="absolute left-[10%] top-1/2 h-px w-[78%] bg-gradient-to-r from-transparent via-sakura/70 to-transparent shadow-[0_0_34px_rgba(255,112,166,0.85)]"
@@ -65,7 +68,7 @@ export function WowMoment() {
           </div>
 
           <div className="absolute left-0 top-[24%] space-y-6">
-            {["Атмосфера", "Структура", "Ощущение"].map((item) => (
+            {["Атмосфера", "Структура", "Навигация"].map((item) => (
               <span
                 key={item}
                 className="flex min-w-44 items-center justify-between gap-5 border border-sakura/35 bg-ink/45 px-4 py-3 text-sm text-bone shadow-[0_16px_70px_rgba(0,0,0,0.28)] backdrop-blur-md"
@@ -80,20 +83,13 @@ export function WowMoment() {
           </div>
 
           <div className="absolute right-0 top-4 flex items-center gap-2 border border-sakura/28 bg-sakura/14 px-4 py-2 text-sm text-bone backdrop-blur-md">
-            <span className="flex -space-x-2">
-              {[0, 1, 2].map((item) => (
-                <span
-                  key={item}
-                  className="grid size-6 place-items-center border border-sakura/45 bg-[linear-gradient(135deg,#3b1528,#d88fa3)] text-[10px] text-bone"
-                />
-              ))}
-            </span>
-            +28
+            <span className="size-2 bg-sakura/70" />
+            Чёткая структура
           </div>
 
           <div className="absolute bottom-[18%] right-[3%] flex items-center gap-3 border border-white/10 bg-white/[0.05] px-5 py-4 text-lg text-bone shadow-[0_20px_80px_rgba(0,0,0,0.32)] backdrop-blur-md">
-            <Heart size={20} className="fill-sakura text-sakura" />
-            12 873
+            <Check size={20} className="text-sakura" />
+            Сильное первое впечатление
           </div>
         </div>
       </div>

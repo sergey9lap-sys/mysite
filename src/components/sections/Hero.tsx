@@ -9,8 +9,8 @@ import {telegramUrl} from "@/data/site";
 const heroFeatures = [
   {label: "Атмосфера и стиль", icon: Flower2},
   {label: "Структура и логика", icon: LayoutGrid},
-  {label: "Живой визуал", icon: Sparkles},
-  {label: "Результат, который работает", icon: Send},
+  {label: "Аккуратный визуал", icon: Sparkles},
+  {label: "Внимание к деталям", icon: Send},
 ];
 
 export function Hero() {
@@ -33,7 +33,7 @@ export function Hero() {
         className="absolute inset-0 bg-[radial-gradient(ellipse_at_24%_48%,rgba(255,112,166,0.12),transparent_34rem),radial-gradient(ellipse_at_74%_24%,rgba(255,112,166,0.22),transparent_31rem),linear-gradient(180deg,rgba(6,6,10,0.42)_0%,transparent_34%,rgba(6,6,10,0.86)_100%)]"
       />
       <div aria-hidden className="grain-layer absolute inset-0 opacity-[0.055]" />
-      <div className="section-shell relative flex min-h-screen items-center pt-24">
+      <div className="section-shell relative flex min-h-screen items-center pt-10">
         <div className="w-full">
           <motion.div
             className="max-w-[43rem]"
@@ -41,13 +41,13 @@ export function Hero() {
             animate={{opacity: 1, y: 0, filter: "blur(0px)"}}
             transition={{duration: 1.1, ease: [0.22, 1, 0.36, 1]}}
           >
-            <p className="mb-6 text-xs uppercase tracking-[0.3em] text-sakura">Креативная digital-лаборатория</p>
-            <h1 className="text-balance font-display text-5xl leading-[0.98] text-bone drop-shadow-[0_10px_42px_rgba(0,0,0,0.55)] sm:text-6xl lg:text-7xl">
-              Создаю digital-проекты с характером и ощущением<span className="text-sakura">.</span>
+            <p className="mb-6 text-xs uppercase tracking-[0.3em] text-sakura">Сайты для экспертов и продуктов</p>
+            <h1 className="text-balance font-display text-4xl leading-[1.02] text-bone drop-shadow-[0_10px_42px_rgba(0,0,0,0.55)] sm:text-5xl lg:text-6xl">
+              Создаю сайты и интерфейсы, которые помогают проекту выглядеть сильнее<span className="text-sakura">.</span>
             </h1>
             <p className="mt-5 max-w-xl text-lg leading-8 text-muted">
-              Сайты, лендинги и веб-сервисы для запусков, продуктов и экспертов — с акцентом на стиль,
-              атмосферу и результат.
+              Создаю сайты, лендинги и интерфейсы для экспертов, продуктов и запусков — с акцентом на
+              подачу, структуру и сильное первое впечатление.
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <ButtonLink href={telegramUrl}>Смотреть проекты</ButtonLink>

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import {ArrowLeft, ArrowRight, CheckSquare, ExternalLink, Grid2X2, Users} from "lucide-react";
+import {ArrowLeft, ArrowRight, CheckSquare, ExternalLink, Grid2X2, Layers} from "lucide-react";
 import {useMemo, useState} from "react";
 import {projects, telegramUrl} from "@/data/site";
 import {cn} from "@/lib/utils";
@@ -12,10 +12,16 @@ const cardStyles = [
   "lg:translate-y-8 lg:rotate-[4deg] lg:scale-[0.96]",
 ];
 
-const projectStats = [
-  ["1 240", "78%", "+32%"],
-  ["12", "24 560", "+18%"],
-  ["8", "2.1x", "+37%"],
+const projectDetails = [
+  ["Первый экран", "Подача", "Путь к заявке"],
+  ["Структура", "Атмосфера", "Смысл"],
+  ["Навигация", "Визуал", "Фокус"],
+];
+
+const projectNotes = [
+  "Продуманная подача",
+  "Живая структура",
+  "Цельный визуал",
 ];
 
 export function Projects() {
@@ -37,14 +43,18 @@ export function Projects() {
       <div aria-hidden className="absolute bottom-[12%] left-[47%] h-28 w-[32rem] -translate-x-1/2 bg-[radial-gradient(ellipse_at_50%_100%,rgba(255,112,166,0.78),transparent_70%)] blur-2xl" />
       <div aria-hidden className="grain-layer absolute inset-0 opacity-[0.06]" />
 
-      <div className="section-shell relative grid min-h-[800px] items-center gap-12 py-24 lg:grid-cols-[0.58fr_1.62fr]">
+      <div className="section-shell relative grid min-h-[760px] items-center gap-12 py-20 lg:grid-cols-[0.58fr_1.62fr]">
         <div className="relative z-10">
           <p className="text-xs uppercase tracking-[0.32em] text-muted">Проекты</p>
-          <h2 className="mt-7 max-w-md font-display text-5xl leading-[1.03] text-bone sm:text-6xl">
-            То, что уже <span className="text-sakura">собрано</span>
+          <h2 className="mt-6 max-w-md font-display text-4xl leading-[1.05] text-bone sm:text-5xl">
+            Проекты,<br />
+            над которыми<br />
+            <span className="text-sakura">я работал</span>
           </h2>
           <p className="mt-7 max-w-md text-lg leading-8 text-muted">
-            Разные проекты, разные ниши, одна цель — сильная подача и внимание к деталям.
+            Каждый проект собирался<br />
+            под свою аудиторию, формат<br />
+            и стиль подачи.
           </p>
 
           <div className="mt-16 flex gap-4">
@@ -70,7 +80,7 @@ export function Projects() {
           <div className="grid gap-6 md:grid-cols-3 lg:[perspective:1300px]">
             {visible.map((project, cardIndex) => {
               const isActive = cardIndex === 1;
-              const stats = projectStats[cardIndex];
+              const details = projectDetails[cardIndex];
 
               return (
                 <article
@@ -93,7 +103,7 @@ export function Projects() {
                         {project.category}
                       </span>
                       <span className="flex gap-3 text-sakura/70">
-                        <Users size={14} />
+                        <Layers size={14} />
                         <Grid2X2 size={14} />
                       </span>
                     </div>
@@ -110,16 +120,17 @@ export function Projects() {
 
                       {isActive ? (
                         <div className="absolute inset-x-5 top-5 rounded border border-white/10 bg-black/30 p-4 backdrop-blur-md">
-                          <p className="text-xs text-bone">Статистика за неделю</p>
+                          <p className="text-xs text-bone">Структура проекта</p>
                           <div className="mt-4 grid grid-cols-3 gap-3">
-                            {stats.map((stat) => (
-                              <div key={stat} className="border border-white/8 bg-white/[0.035] p-3">
-                                <p className="text-xl text-bone">{stat}</p>
-                                <p className="mt-1 text-[11px] text-muted">Прогресс</p>
+                            {details.map((detail) => (
+                              <div key={detail} className="border border-white/8 bg-white/[0.035] p-3">
+                                <p className="text-[11px] leading-4 text-bone">{detail}</p>
                               </div>
                             ))}
                           </div>
-                          <div className="mt-5 h-16 border-b border-sakura/20 bg-[linear-gradient(145deg,transparent_0_10%,rgba(255,112,166,0.46)_10%_14%,transparent_14%_29%,rgba(255,112,166,0.62)_29%_34%,transparent_34%_51%,rgba(255,112,166,0.7)_51%_56%,transparent_56%_76%,rgba(255,112,166,0.86)_76%_81%,transparent_81%)]" />
+                          <div className="mt-5 flex h-16 items-center border border-sakura/20 bg-white/[0.025] px-4 text-xs leading-5 text-muted">
+                            Экран ведёт человека от первого впечатления к понятному действию.
+                          </div>
                         </div>
                       ) : null}
                     </div>
@@ -142,15 +153,10 @@ export function Projects() {
                     <div className="mt-5 flex items-center justify-between text-sm text-muted">
                       <span className="flex items-center gap-2">
                         <CheckSquare size={15} className="text-sakura" />
-                        {isActive ? "20+ экранов" : cardIndex === 0 ? "12 экранов" : "8 экранов"}
+                        {projectNotes[cardIndex]}
                       </span>
-                      <span className="flex -space-x-2">
-                        {[0, 1, 2].map((avatar) => (
-                          <span key={avatar} className="size-7 rounded-full border border-sakura/35 bg-[linear-gradient(135deg,#311021,#d88fa3)]" />
-                        ))}
-                        <span className="grid size-7 place-items-center rounded-full border border-sakura/35 bg-sakura/12 text-xs text-sakura">
-                          +{cardIndex === 1 ? 5 : 3}
-                        </span>
+                      <span className="border border-sakura/25 bg-sakura/10 px-3 py-1 text-xs text-sakura">
+                        без шаблона
                       </span>
                     </div>
                   </div>

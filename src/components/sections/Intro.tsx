@@ -16,8 +16,8 @@ export function Intro() {
             Мне скучно делать сайты «как у всех».
           </h2>
           <p className="mt-5 max-w-md text-base leading-8 text-muted">
-            Люблю проекты, где есть характер: атмосфера, визуал и ощущение, что человек попал не на
-            очередной шаблон, а в живой digital-продукт.
+            Люблю проекты, где есть характер: понятная мысль, сильная подача и ощущение, что человек попал не на
+            очередной шаблон, а в место, которому можно доверять.
           </p>
           <p className="mt-12 text-xs uppercase tracking-[0.32em] text-sakura">
             Мой подход
@@ -30,6 +30,7 @@ export function Intro() {
               key={card.title}
               className={cn(
                 "group relative min-h-[290px] overflow-hidden border border-sakura/25 bg-white/[0.035] p-6 shadow-[0_28px_100px_rgba(0,0,0,0.34)] backdrop-blur-2xl transition duration-500 hover:-translate-y-2 hover:border-sakura/55",
+                index === 1 && "lg:min-h-[320px]",
                 cardRotations[index],
               )}
             >
@@ -37,21 +38,13 @@ export function Intro() {
               <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-sakura/20 blur-3xl transition duration-500 group-hover:bg-sakura/30" />
               <IconBadge icon={card.icon} />
               <h3 className="mt-7 text-2xl text-bone">{card.title}</h3>
-              <p className="mt-3 text-sm leading-6 text-muted">{card.description}</p>
+              <p className={cn("mt-3 text-sm leading-6 text-muted", index === 1 && "max-w-[11rem] text-[12px] leading-[1.65]")}>{card.description}</p>
 
               {index === 0 ? (
                 <div className="mt-9">
-                  <div className="flex items-center justify-between text-xs text-muted">
-                    {["Анализ", "Структура", "Запуск"].map((item, step) => (
-                      <span key={item} className="flex flex-col items-center gap-2">
-                        <span
-                          className={cn(
-                            "grid size-6 place-items-center rounded-full border text-[11px]",
-                            step === 0 ? "border-sakura bg-sakura text-ink" : "border-white/16 bg-white/[0.025]",
-                          )}
-                        >
-                          {step + 1}
-                        </span>
+                  <div className="grid gap-3 text-xs text-muted">
+                    {["Сценарий запуска", "Подача продукта", "Структура прогрева"].map((item) => (
+                      <span key={item} className="border border-white/10 bg-white/[0.035] px-3 py-2 text-bone">
                         {item}
                       </span>
                     ))}
@@ -64,29 +57,29 @@ export function Intro() {
               ) : null}
 
               {index === 1 ? (
-                <div className="mt-7 grid grid-cols-2 gap-3">
-                  <div className="border border-white/10 bg-white/[0.035] p-3">
-                    <p className="text-xs text-muted">Активность</p>
-                    <p className="mt-2 text-xl text-bone">+23%</p>
-                    <div className="mt-4 h-8 bg-[linear-gradient(135deg,transparent_0_18%,rgba(255,112,166,0.5)_18%_22%,transparent_22%_38%,rgba(255,112,166,0.58)_38%_44%,transparent_44%_63%,rgba(255,112,166,0.72)_63%_70%,transparent_70%)]" />
-                  </div>
-                  <div className="border border-white/10 bg-white/[0.035] p-3">
-                    <p className="text-xs text-muted">Пользователи</p>
-                    <p className="mt-2 text-xl text-bone">24 560</p>
-                    <div className="mt-4 flex h-8 items-end gap-1">
-                      {[30, 48, 36, 62, 52, 80].map((height) => (
-                        <span key={height} className="flex-1 bg-sakura/55" style={{height: `${height}%`}} />
-                      ))}
+                <div className="mt-9 grid gap-2.5">
+                  {["Личный кабинет", "Мини-приложение", "Внутренние инструменты", "Удобный интерфейс"].map((item) => (
+                    <div key={item} className="border border-white/10 bg-white/[0.035] px-3 py-2">
+                      <p className="text-xs leading-5 text-bone">{item}</p>
                     </div>
-                  </div>
+                  ))}
                 </div>
               ) : null}
 
               {index === 2 ? (
                 <div className="mt-8">
-                  <p className="text-sm text-muted">Прирост конверсии</p>
-                  <p className="mt-2 text-4xl text-bone">+37%</p>
-                  <div className="mt-7 h-16 border-b border-sakura/25 bg-[linear-gradient(155deg,transparent_0_12%,rgba(255,112,166,0.32)_12%_15%,transparent_15%_30%,rgba(255,112,166,0.46)_30%_34%,transparent_34%_55%,rgba(255,112,166,0.58)_55%_60%,transparent_60%_78%,rgba(255,112,166,0.8)_78%_82%,transparent_82%)]" />
+                  <div className="grid gap-3">
+                    {[
+                      "Усиливаю подачу",
+                      "Убираю ощущение шаблона",
+                      "Дорабатываю структуру",
+                      "Собираю цельный визуал",
+                    ].map((item) => (
+                      <div key={item} className="border border-white/10 bg-white/[0.035] px-3 py-2 text-sm text-bone">
+                        {item}
+                      </div>
+                    ))}
+                  </div>
                 </div>
               ) : null}
             </article>

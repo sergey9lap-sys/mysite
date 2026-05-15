@@ -5,12 +5,12 @@ import {ButtonLink} from "@/components/ui/ButtonLink";
 import {cn} from "@/lib/utils";
 
 const serviceMeta = [
-  {tag: "landing", time: "от 7 дней", className: "lg:col-start-1 lg:row-start-1 lg:-rotate-[3deg] lg:translate-y-8"},
-  {tag: "web app", time: "индивидуально", className: "lg:col-start-2 lg:row-start-1 lg:scale-110 lg:-translate-y-3"},
-  {tag: "product", time: "от 10 дней", className: "lg:col-start-1 lg:row-start-2 lg:rotate-[3deg]"},
-  {tag: "mini app", time: "от 5 дней", className: "lg:col-start-3 lg:row-start-1 lg:rotate-[2deg] lg:translate-y-10"},
-  {tag: "upgrade", time: "от 3 дней", className: "lg:col-start-2 lg:row-start-2 lg:rotate-[2deg] lg:translate-y-4"},
-  {tag: "package", time: "индивидуально", className: "lg:col-start-3 lg:row-start-2 lg:-rotate-[2deg] lg:-translate-y-1"},
+  {tag: "Лендинг", time: "от 7 дней", className: "lg:col-start-1 lg:row-start-1 lg:-rotate-[3deg] lg:translate-y-8"},
+  {tag: "Сайт продукта", time: "индивидуально", className: "lg:col-start-2 lg:row-start-1 lg:scale-110 lg:-translate-y-3"},
+  {tag: "Мини-приложение", time: "от 5 дней", className: "lg:col-start-1 lg:row-start-2 lg:rotate-[3deg]"},
+  {tag: "Сервис", time: "от 10 дней", className: "lg:col-start-3 lg:row-start-1 lg:rotate-[2deg] lg:translate-y-10"},
+  {tag: "Усиление", time: "от 3 дней", className: "lg:col-start-2 lg:row-start-2 lg:rotate-[2deg] lg:translate-y-4"},
+  {tag: "Упаковка", time: "индивидуально", className: "lg:col-start-3 lg:row-start-2 lg:-rotate-[2deg] lg:-translate-y-1"},
 ];
 
 export function Services() {
@@ -25,14 +25,17 @@ export function Services() {
       <div aria-hidden className="absolute left-[45%] top-[21%] h-[34rem] w-[48rem] -rotate-12 bg-[radial-gradient(ellipse_at_50%_50%,rgba(255,112,166,0.2),transparent_68%)] blur-3xl" />
       <div aria-hidden className="grain-layer absolute inset-0 opacity-[0.06]" />
 
-      <div className="section-shell grid min-h-[790px] items-center gap-12 py-24 lg:grid-cols-[0.62fr_1.38fr]">
+      <div className="section-shell grid min-h-[740px] items-center gap-12 py-20 lg:grid-cols-[0.62fr_1.38fr]">
         <div className="relative z-10">
           <p className="text-xs uppercase tracking-[0.32em] text-sakura">Форматы</p>
-          <h2 className="mt-6 max-w-lg font-display text-5xl leading-[1.03] text-bone sm:text-6xl">
-            Собираю не набор услуг, а <span className="text-sakura">выразительные digital-формы</span>
+          <h2 className="mt-6 max-w-lg font-display text-4xl leading-[1.05] text-bone sm:text-5xl">
+            Подбираю формат<br />
+            <span className="text-sakura">под задачу проекта</span>
           </h2>
           <p className="mt-7 max-w-md text-lg leading-8 text-muted">
-            Не продаю список услуг. Собираю формат под задачу: от лендинга до сервиса, который реально работает.
+            От лендинга до сервиса —<br />
+            подбираю решение под задачу,<br />
+            этап проекта и формат работы с аудиторией.
           </p>
 
           <div className="mt-12 max-w-md border border-sakura/25 bg-white/[0.035] p-6 shadow-[0_0_80px_rgba(255,112,166,0.12)] backdrop-blur-xl">
@@ -41,8 +44,11 @@ export function Services() {
                 <MessageSquare size={23} strokeWidth={1.6} />
               </span>
               <div>
-                <p className="text-sm leading-6 text-muted">Есть задача, но не знаешь формат?</p>
-                <p className="mt-1 text-sm leading-6 text-muted">Разберем.</p>
+                <p className="text-base text-bone">Не знаешь, с чего начать?</p>
+                <p className="mt-2 text-sm leading-6 text-muted">
+                  Помогу определить формат<br />
+                  и собрать понятную структуру проекта.
+                </p>
                 <ButtonLink href={telegramUrl} variant="ghost" className="mt-5 min-h-10 px-4">
                   Обсудить проект
                 </ButtonLink>
