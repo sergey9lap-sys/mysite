@@ -3,6 +3,9 @@ import {Check} from "lucide-react";
 import {ButtonLink} from "@/components/ui/ButtonLink";
 import {atmosphereSceneImage, telegramUrl} from "@/data/site";
 
+const pinkUiClass =
+  "border-sakura/30 bg-[linear-gradient(135deg,rgba(255,112,166,0.16),rgba(255,255,255,0.035)_48%,rgba(255,112,166,0.08))] shadow-[0_14px_42px_rgba(255,112,166,0.14)] backdrop-blur-md";
+
 export function WowMoment() {
   return (
     <section data-reveal-section className="relative z-10 overflow-hidden border-b border-sakura/15 bg-ink">
@@ -58,7 +61,7 @@ export function WowMoment() {
           <div className="absolute right-[2%] top-[18%] hidden h-[330px] w-[34%] min-w-56 border border-white/10 bg-white/[0.03] p-5 backdrop-blur-xl lg:block">
             <div className="space-y-3">
               {["Главная", "Проекты", "Форматы", "Контакты"].map((item, index) => (
-                <div key={item} className="flex items-center gap-3 border border-white/10 bg-ink/28 px-3 py-3 text-xs text-muted">
+                <div key={item} className={`flex items-center gap-3 border px-3 py-3 text-xs text-bone ${pinkUiClass}`}>
                   <span className="size-2 bg-sakura/60" />
                   <span>{item}</span>
                   <span className="ml-auto text-sakura/70">0{index + 1}</span>
@@ -82,12 +85,12 @@ export function WowMoment() {
             ))}
           </div>
 
-          <div className="absolute right-0 top-4 flex items-center gap-2 border border-sakura/28 bg-sakura/14 px-4 py-2 text-sm text-bone backdrop-blur-md">
+          <div className={`absolute right-0 top-4 flex items-center gap-2 border px-4 py-2 text-sm text-bone ${pinkUiClass}`}>
             <span className="size-2 bg-sakura/70" />
             Чёткая структура
           </div>
 
-          <div className="absolute bottom-[18%] right-[3%] flex items-center gap-3 border border-white/10 bg-white/[0.05] px-5 py-4 text-lg text-bone shadow-[0_20px_80px_rgba(0,0,0,0.32)] backdrop-blur-md">
+          <div className={`absolute bottom-[18%] right-[3%] flex items-center gap-3 border px-5 py-4 text-lg text-bone ${pinkUiClass}`}>
             <Check size={20} className="text-sakura" />
             Сильное первое впечатление
           </div>

@@ -3,6 +3,8 @@ import {IconBadge} from "@/components/ui/IconBadge";
 import {cn} from "@/lib/utils";
 
 const cardRotations = ["lg:-rotate-[4deg] lg:translate-y-4", "lg:rotate-[3deg]", "lg:-rotate-[3deg] lg:-translate-y-3"];
+const pinkUiClass =
+  "border-sakura/30 bg-[linear-gradient(135deg,rgba(255,112,166,0.16),rgba(255,255,255,0.035)_48%,rgba(255,112,166,0.08))] shadow-[0_12px_34px_rgba(255,112,166,0.12)] backdrop-blur-md";
 
 export function Intro() {
   return (
@@ -44,12 +46,12 @@ export function Intro() {
                 <div className="mt-9">
                   <div className="grid gap-3 text-xs text-muted">
                     {["Сценарий запуска", "Подача продукта", "Структура прогрева"].map((item) => (
-                      <span key={item} className="border border-white/10 bg-white/[0.035] px-3 py-2 text-bone">
+                      <span key={item} className={cn("border px-3 py-2 text-bone", pinkUiClass)}>
                         {item}
                       </span>
                     ))}
                   </div>
-                  <div className="mt-6 flex min-h-11 items-center justify-between border border-sakura/20 bg-sakura/10 px-4 text-sm text-bone">
+                  <div className={cn("mt-6 flex min-h-11 items-center justify-between border px-4 text-sm text-bone", pinkUiClass)}>
                     Запустить проект
                     <span className="text-2xl leading-none text-sakura">→</span>
                   </div>
@@ -59,7 +61,7 @@ export function Intro() {
               {index === 1 ? (
                 <div className="mt-9 grid gap-2.5">
                   {["Личный кабинет", "Мини-приложение", "Внутренние инструменты", "Удобный интерфейс"].map((item) => (
-                    <div key={item} className="border border-white/10 bg-white/[0.035] px-3 py-2">
+                    <div key={item} className={cn("border px-3 py-2", pinkUiClass)}>
                       <p className="text-xs leading-5 text-bone">{item}</p>
                     </div>
                   ))}
@@ -75,7 +77,7 @@ export function Intro() {
                       "Дорабатываю структуру",
                       "Собираю цельный визуал",
                     ].map((item) => (
-                      <div key={item} className="border border-white/10 bg-white/[0.035] px-3 py-2 text-sm text-bone">
+                      <div key={item} className={cn("border px-3 py-2 text-sm text-bone", pinkUiClass)}>
                         {item}
                       </div>
                     ))}

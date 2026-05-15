@@ -3,6 +3,8 @@ import {Beaker, Eye, MessageSquare, Package, Sparkles, Zap} from "lucide-react";
 import {personalityTags} from "@/data/site";
 
 const tagIcons = [Zap, Sparkles, Beaker, MessageSquare, Package, Eye];
+const pinkUiClass =
+  "border-sakura/30 bg-[linear-gradient(135deg,rgba(255,112,166,0.16),rgba(255,255,255,0.035)_48%,rgba(255,112,166,0.08))] shadow-[0_16px_48px_rgba(255,112,166,0.13)] backdrop-blur-xl";
 
 export function About() {
   return (
@@ -54,9 +56,9 @@ export function About() {
               return (
                 <span
                   key={tag}
-                  className="flex min-h-16 min-w-0 items-center gap-3 border border-sakura/18 bg-white/[0.035] px-4 py-3 text-sm leading-5 text-bone shadow-[0_24px_90px_rgba(0,0,0,0.24)] backdrop-blur-xl transition hover:-translate-y-1 hover:border-sakura/45 hover:bg-sakura/[0.07]"
+                  className={`flex min-h-16 min-w-0 items-center gap-3 border px-4 py-3 text-sm leading-5 text-bone transition hover:-translate-y-1 hover:border-sakura/55 hover:bg-sakura/[0.1] ${pinkUiClass}`}
                 >
-                  <span className="grid size-10 shrink-0 place-items-center border border-sakura/24 bg-sakura/10 text-sakura shadow-[0_0_34px_rgba(255,112,166,0.16)]">
+                  <span className="grid size-10 shrink-0 place-items-center border border-sakura/35 bg-sakura/14 text-sakura shadow-[0_0_34px_rgba(255,112,166,0.2)]">
                     <Icon size={18} strokeWidth={1.65} />
                   </span>
                   <span className="min-w-0 break-words">{tag}</span>

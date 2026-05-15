@@ -2,6 +2,9 @@ import {MessageSquare, Sparkles} from "lucide-react";
 import {ButtonLink} from "@/components/ui/ButtonLink";
 import {telegramUrl} from "@/data/site";
 
+const pinkPanelClass =
+  "border-sakura/28 bg-[linear-gradient(135deg,rgba(255,112,166,0.15),rgba(255,255,255,0.03)_44%,rgba(255,112,166,0.08))] shadow-[0_28px_110px_rgba(255,112,166,0.15)] backdrop-blur-xl";
+
 export function FinalCta() {
   return (
     <section id="contact" data-reveal-section className="relative z-10 overflow-hidden border-b border-sakura/15 bg-ink">
@@ -27,11 +30,11 @@ export function FinalCta() {
             который хочется улучшить.
           </p>
 
-          <div className="relative mt-9 max-w-4xl border border-sakura/16 bg-white/[0.025] p-6 shadow-[0_30px_110px_rgba(0,0,0,0.3)] backdrop-blur-xl">
+          <div className={`relative mt-9 max-w-4xl border p-6 ${pinkPanelClass}`}>
             <span className="absolute -left-1.5 -top-1.5 size-3 rounded-full bg-sakura shadow-[0_0_24px_rgba(255,112,166,1)]" />
             <div className="grid gap-6 md:grid-cols-[0.95fr_1fr]">
               <div className="flex gap-5">
-                <span className="grid size-16 shrink-0 place-items-center rounded-full border border-sakura/24 bg-sakura/10 text-sakura shadow-[0_0_36px_rgba(255,112,166,0.22)]">
+                <span className="grid size-16 shrink-0 place-items-center rounded-full border border-sakura/35 bg-sakura/14 text-sakura shadow-[0_0_42px_rgba(255,112,166,0.24)]">
                   <Sparkles size={24} strokeWidth={1.55} />
                 </span>
                 <p className="text-base leading-8 text-muted">
