@@ -1,7 +1,7 @@
 import Image from "next/image";
 import {Check, Heart} from "lucide-react";
 import {ButtonLink} from "@/components/ui/ButtonLink";
-import {atmosphereSceneImage} from "@/data/site";
+import {atmosphereSceneImage, telegramUrl} from "@/data/site";
 
 export function WowMoment() {
   return (
@@ -26,7 +26,7 @@ export function WowMoment() {
             Иногда именно <span className="text-sakura">атмосфера решает</span>, останется человек внутри проекта или закроет вкладку.
           </p>
           <div className="mt-7 flex">
-            <ButtonLink href="#projects" variant="ghost">
+            <ButtonLink href={telegramUrl} variant="ghost">
               Перейти к проектам
             </ButtonLink>
           </div>

@@ -3,8 +3,7 @@
 import Image from "next/image";
 import {ArrowLeft, ArrowRight, CheckSquare, ExternalLink, Grid2X2, Users} from "lucide-react";
 import {useMemo, useState} from "react";
-import Link from "next/link";
-import {projects} from "@/data/site";
+import {projects, telegramUrl} from "@/data/site";
 import {cn} from "@/lib/utils";
 
 const cardStyles = [
@@ -29,7 +28,7 @@ export function Projects() {
 
   return (
     <section id="projects" data-reveal-section className="relative z-10 overflow-hidden border-b border-sakura/15 bg-ink">
-      <div aria-hidden className="absolute inset-0 bg-[url('/images/hero/sakura-digital-bg.png')] bg-cover bg-[58%_42%] opacity-44" />
+      <div aria-hidden className="absolute inset-0 bg-[url('/images/hero/projects-showcase-bg.png')] bg-cover bg-[58%_42%] opacity-56" />
       <div
         aria-hidden
         className="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,5,8,0.98)_0%,rgba(5,5,8,0.78)_34%,rgba(7,5,11,0.46)_66%,rgba(5,5,8,0.9)_100%),radial-gradient(ellipse_at_58%_42%,rgba(255,112,166,0.3),transparent_38rem),linear-gradient(180deg,rgba(5,5,8,0.88)_0%,rgba(5,5,8,0.24)_38%,rgba(5,5,8,0.9)_100%)]"
@@ -51,14 +50,14 @@ export function Projects() {
           <div className="mt-16 flex gap-4">
             <button
               onClick={() => move(-1)}
-              className="grid size-16 place-items-center rounded-full border border-sakura/24 bg-white/[0.035] text-bone shadow-[0_18px_70px_rgba(0,0,0,0.28)] backdrop-blur-xl transition hover:-translate-y-1 hover:border-sakura/65 hover:text-sakura"
+              className="grid size-16 place-items-center rounded-full border border-[#ff8fc1] bg-[#d83f86] text-white shadow-[0_0_46px_rgba(255,112,166,0.36)] backdrop-blur-xl transition hover:-translate-y-1 hover:border-[#ffadd2] hover:bg-[#ff6bab]"
               aria-label="Предыдущие проекты"
             >
               <ArrowLeft size={25} strokeWidth={1.7} />
             </button>
             <button
               onClick={() => move(1)}
-              className="grid size-16 place-items-center rounded-full border border-sakura/24 bg-white/[0.035] text-bone shadow-[0_18px_70px_rgba(0,0,0,0.28)] backdrop-blur-xl transition hover:-translate-y-1 hover:border-sakura/65 hover:text-sakura"
+              className="grid size-16 place-items-center rounded-full border border-[#ff8fc1] bg-[#d83f86] text-white shadow-[0_0_46px_rgba(255,112,166,0.36)] backdrop-blur-xl transition hover:-translate-y-1 hover:border-[#ffadd2] hover:bg-[#ff6bab]"
               aria-label="Следующие проекты"
             >
               <ArrowRight size={25} strokeWidth={1.7} />
@@ -130,13 +129,15 @@ export function Projects() {
                       <p className="mt-4 min-h-24 text-base leading-7 text-muted">{project.description}</p>
                     </div>
 
-                    <Link
-                      href={`/projects/${project.slug}`}
-                      className="mt-auto flex min-h-14 items-center justify-between border border-sakura/35 bg-white/[0.025] px-5 text-base text-bone transition hover:-translate-y-1 hover:border-sakura/70 hover:bg-sakura/[0.08]"
+                    <a
+                      href={telegramUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mt-auto flex min-h-14 items-center justify-between border border-[#ff8fc1] bg-[#d83f86] px-5 text-base font-medium text-white shadow-[0_0_48px_rgba(255,112,166,0.36)] transition hover:-translate-y-1 hover:border-[#ffadd2] hover:bg-[#ff6bab]"
                     >
                       Открыть проект
-                      <ExternalLink size={17} strokeWidth={1.7} className="text-sakura" />
-                    </Link>
+                      <ExternalLink size={17} strokeWidth={1.7} className="text-white" />
+                    </a>
 
                     <div className="mt-5 flex items-center justify-between text-sm text-muted">
                       <span className="flex items-center gap-2">

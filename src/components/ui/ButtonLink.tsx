@@ -14,10 +14,10 @@ export function ButtonLink({href, children, variant = "primary", icon = "arrow",
   const Icon = icon === "send" ? Send : ArrowUpRight;
   const isExternal = href.startsWith("http");
   const classes = cn(
-    "inline-flex min-h-12 items-center justify-center gap-2 border px-5 text-sm transition duration-300 hover:-translate-y-1 hover:scale-[1.01] focus:outline-none focus:ring-2 focus:ring-sakura/40",
+    "inline-flex min-h-12 items-center justify-center gap-2 border px-5 text-sm font-medium transition duration-300 hover:-translate-y-1 hover:scale-[1.01] focus:outline-none focus:ring-2 focus:ring-sakura/50",
     variant === "primary"
-      ? "border-sakura/70 bg-sakura text-ink shadow-[0_0_58px_rgba(255,112,166,0.34)] hover:bg-glow"
-      : "border-white/16 bg-white/[0.03] text-bone hover:border-sakura/50 hover:bg-white/[0.06]",
+      ? "border-[#ff8fc1] bg-[#e2478d] text-white shadow-[0_0_58px_rgba(255,112,166,0.44)] hover:border-[#ffadd2] hover:bg-[#ff6bab]"
+      : "border-[#ff8fc1] bg-[#d83f86] text-white shadow-[0_0_48px_rgba(255,112,166,0.36)] hover:border-[#ffadd2] hover:bg-[#ff6bab]",
     className,
   );
 

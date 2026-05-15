@@ -58,7 +58,7 @@ export default async function ProjectPage({params}: ProjectPageProps) {
                 <ButtonLink href={telegramUrl} icon="send">
                   {project.ctaLabel}
                 </ButtonLink>
-                <ButtonLink href="/#projects" variant="ghost">
+                <ButtonLink href={telegramUrl} variant="ghost">
                   Смотреть другие
                 </ButtonLink>
               </div>

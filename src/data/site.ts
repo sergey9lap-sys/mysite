@@ -23,7 +23,7 @@ export type ProcessStep = {
   icon: "target" | "layers" | "eye" | "zap" | "shield";
 };
 
-export const telegramUrl = "https://t.me/username";
+export const telegramUrl = "https://t.me/lp_sergey";
 export const serviceSceneImage = "/images/placeholders/photo/ChatGPT Image 12 мая 2026 г., 18_52_00.png";
 export const atmosphereSceneImage = "/images/placeholders/photo/ChatGPT Image 12 мая 2026 г., 19_00_32.png";
 export const showcaseSceneImage = "/images/placeholders/photo/ChatGPT Image 12 мая 2026 г., 19_00_47.png";
