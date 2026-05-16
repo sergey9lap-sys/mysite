@@ -13,6 +13,9 @@ export function ClientMotion() {
       wheelMultiplier: 0.9,
     });
 
+    const stopLenis = () => lenis.stop();
+    const startLenis = () => lenis.start();
+
     gsap.registerPlugin(ScrollTrigger);
 
     const raf = (time: number) => {
@@ -21,6 +24,9 @@ export function ClientMotion() {
     };
 
     const frame = requestAnimationFrame(raf);
+
+    window.addEventListener("project-modal:open", stopLenis);
+    window.addEventListener("project-modal:close", startLenis);
 
     const sections = gsap.utils.toArray<HTMLElement>("[data-reveal-section]");
     sections.forEach((section) => {
@@ -43,6 +49,8 @@ export function ClientMotion() {
     });
 
     return () => {
+      window.removeEventListener("project-modal:open", stopLenis);
+      window.removeEventListener("project-modal:close", startLenis);
       cancelAnimationFrame(frame);
       lenis.destroy();
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
