@@ -16,7 +16,7 @@ const serviceMeta = [
 export function Services() {
   return (
     <section id="services" data-reveal-section className="relative z-10 overflow-hidden border-b border-sakura/15 bg-ink">
-      <div aria-hidden className="absolute inset-0 bg-[url('/images/hero/services-formats-bg.png')] bg-cover bg-[62%_48%] opacity-52" />
+      <div aria-hidden className="absolute inset-0 bg-[url('/images/hero/services-formats-bg.jpg')] bg-cover bg-[62%_48%] opacity-52" />
       <div
         aria-hidden
         className="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,5,8,0.98)_0%,rgba(5,5,8,0.88)_30%,rgba(7,5,11,0.54)_66%,rgba(5,5,8,0.84)_100%),radial-gradient(ellipse_at_58%_42%,rgba(255,112,166,0.25),transparent_36rem),radial-gradient(ellipse_at_78%_78%,rgba(255,112,166,0.22),transparent_32rem)]"

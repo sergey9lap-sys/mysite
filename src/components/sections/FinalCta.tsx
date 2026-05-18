@@ -8,7 +8,7 @@ const pinkPanelClass =
 export function FinalCta() {
   return (
     <section id="contact" data-reveal-section className="relative z-10 overflow-hidden border-b border-sakura/15 bg-ink">
-      <div aria-hidden className="absolute inset-0 bg-[url('/images/hero/final-cta-bg.png')] bg-cover bg-[60%_56%] opacity-58" />
+      <div aria-hidden className="absolute inset-0 bg-[url('/images/hero/final-cta-bg.jpg')] bg-cover bg-[60%_56%] opacity-58" />
       <div
         aria-hidden
         className="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,5,8,0.94)_0%,rgba(6,5,9,0.66)_42%,rgba(6,5,9,0.42)_70%,rgba(5,5,8,0.92)_100%),radial-gradient(ellipse_at_27%_43%,rgba(255,112,166,0.32),transparent_36rem),radial-gradient(ellipse_at_76%_76%,rgba(255,112,166,0.26),transparent_30rem),linear-gradient(180deg,rgba(5,5,8,0.92)_0%,rgba(5,5,8,0.12)_38%,rgba(5,5,8,0.94)_100%)]"

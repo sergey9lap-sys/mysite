@@ -9,7 +9,7 @@ const pinkUiClass =
 export function About() {
   return (
     <section id="about" data-reveal-section className="relative z-10 overflow-hidden border-b border-sakura/15 bg-ink">
-      <div aria-hidden className="absolute inset-0 bg-[url('/images/hero/about-process-bg.png')] bg-cover bg-[50%_48%] opacity-58" />
+      <div aria-hidden className="absolute inset-0 bg-[url('/images/hero/about-process-bg.jpg')] bg-cover bg-[50%_48%] opacity-58" />
       <div
         aria-hidden
         className="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,5,8,0.96)_0%,rgba(6,5,9,0.74)_39%,rgba(6,5,9,0.5)_65%,rgba(5,5,8,0.92)_100%),radial-gradient(ellipse_at_31%_68%,rgba(255,112,166,0.28),transparent_34rem),radial-gradient(ellipse_at_88%_18%,rgba(255,112,166,0.2),transparent_28rem),linear-gradient(180deg,rgba(5,5,8,0.9)_0%,rgba(5,5,8,0.18)_34%,rgba(5,5,8,0.92)_100%)]"

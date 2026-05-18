@@ -9,7 +9,7 @@ const pinkUiClass =
 export function Intro() {
   return (
     <section data-reveal-section className="relative z-10 overflow-hidden border-b border-sakura/15 bg-ink">
-      <div aria-hidden className="absolute inset-0 bg-[url('/images/hero/intro-value-bg.png')] bg-cover bg-[68%_42%] opacity-52" />
+      <div aria-hidden className="absolute inset-0 bg-[url('/images/hero/intro-value-bg.jpg')] bg-cover bg-[68%_42%] opacity-52" />
       <div aria-hidden className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,6,10,0.96)_0%,rgba(8,7,12,0.78)_35%,rgba(8,7,12,0.5)_100%),radial-gradient(ellipse_at_88%_20%,rgba(255,112,166,0.28),transparent_34rem),radial-gradient(ellipse_at_5%_22%,rgba(255,112,166,0.22),transparent_25rem)]" />
       <div aria-hidden className="grain-layer absolute inset-0" />
       <div className="section-shell grid min-h-[560px] items-center gap-10 py-20 lg:grid-cols-[0.86fr_1.28fr]">

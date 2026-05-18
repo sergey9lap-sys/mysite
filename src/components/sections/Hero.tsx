@@ -17,7 +17,7 @@ export function Hero() {
   return (
     <section id="top" className="relative z-10 min-h-screen overflow-hidden border-b border-sakura/15 bg-ink">
       <Image
-        src="/images/hero/sakura-digital-bg.png"
+        src="/images/hero/sakura-digital-bg.jpg"
         alt=""
         fill
         priority

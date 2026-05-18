@@ -23,7 +23,7 @@ const cardPositions = [
 export function Approach() {
   return (
     <section id="approach" data-reveal-section className="relative z-10 overflow-hidden border-b border-sakura/15 bg-ink">
-      <div aria-hidden className="absolute inset-0 bg-[url('/images/hero/approach-process-bg.png')] bg-cover bg-[55%_56%] opacity-50" />
+      <div aria-hidden className="absolute inset-0 bg-[url('/images/hero/approach-process-bg.jpg')] bg-cover bg-[55%_56%] opacity-50" />
       <div
         aria-hidden
         className="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,5,8,0.98)_0%,rgba(5,5,8,0.82)_38%,rgba(7,5,11,0.58)_70%,rgba(5,5,8,0.9)_100%),radial-gradient(ellipse_at_52%_54%,rgba(255,112,166,0.26),transparent_36rem),radial-gradient(ellipse_at_34%_88%,rgba(255,112,166,0.18),transparent_30rem)]"
@@ -105,7 +105,7 @@ export function Approach() {
           </div>
 
           <div className="relative min-h-28 overflow-hidden border border-sakura/18 bg-white/[0.025] shadow-[0_28px_110px_rgba(0,0,0,0.3)] backdrop-blur-xl">
-            <Image src="/images/hero/approach-process-bg.png" alt="" fill sizes="48vw" className="object-cover object-[68%_54%] opacity-55" />
+            <Image src="/images/hero/approach-process-bg.jpg" alt="" fill sizes="48vw" className="object-cover object-[68%_54%] opacity-55" />
             <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,5,8,0.7),rgba(5,5,8,0.22),rgba(5,5,8,0.78))]" />
           </div>
         </div>

@@ -54,7 +54,7 @@ export function Projects() {
 
   return (
     <section id="projects" data-reveal-section className="relative z-10 overflow-hidden border-b border-sakura/15 bg-ink">
-      <div aria-hidden className="absolute inset-0 bg-[url('/images/hero/projects-showcase-bg.png')] bg-cover bg-[58%_42%] opacity-56" />
+      <div aria-hidden className="absolute inset-0 bg-[url('/images/hero/projects-showcase-bg.jpg')] bg-cover bg-[58%_42%] opacity-56" />
       <div
         aria-hidden
         className="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,5,8,0.98)_0%,rgba(5,5,8,0.78)_34%,rgba(7,5,11,0.46)_66%,rgba(5,5,8,0.9)_100%),radial-gradient(ellipse_at_58%_42%,rgba(255,112,166,0.3),transparent_38rem),linear-gradient(180deg,rgba(5,5,8,0.88)_0%,rgba(5,5,8,0.24)_38%,rgba(5,5,8,0.9)_100%)]"
