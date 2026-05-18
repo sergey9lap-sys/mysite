@@ -343,17 +343,6 @@ export const projects: Project[] = [
     showcaseImages: barselonaImages,
     showcaseLabels: ["Главный экран", "Вход", "Кабинет", "Контент", "Материалы", "Оплата", "Доступ", "Навигация", "Профиль", "Состояния", "Интерфейс", "Детали", "Финальный экран"],
   },
-  {
-    slug: "telegram-mini-app",
-    title: "Telegram Mini App",
-    category: "Mini App",
-    description: "Мини-приложение внутри Telegram для вовлечения и автоматизации.",
-    summary: "Быстрый интерактивный сценарий внутри Telegram: компактный, понятный и визуально собранный.",
-    image: serviceSceneImage,
-    gallery: [serviceSceneImage],
-    year: "2026",
-    ctaLabel: "Обсудить похожий проект",
-  },
 ];
 
 export const services: Service[] = [
