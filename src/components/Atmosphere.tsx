@@ -2,7 +2,7 @@
 
 import {motion} from "framer-motion";
 
-const petals = Array.from({length: 22}, (_, index) => ({
+const petals = Array.from({length: 14}, (_, index) => ({
   id: index,
   left: `${(index * 37) % 100}%`,
   delay: (index % 7) * 0.6,
@@ -13,7 +13,7 @@ const petals = Array.from({length: 22}, (_, index) => ({
   scale: index % 6 === 0 ? 1.22 : index % 4 === 0 ? 0.7 : index % 3 === 0 ? 0.88 : 1,
 }));
 
-const dust = Array.from({length: 30}, (_, index) => ({
+const dust = Array.from({length: 18}, (_, index) => ({
   id: index,
   left: `${(index * 23) % 100}%`,
   top: `${(index * 41) % 100}%`,

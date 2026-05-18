@@ -150,7 +150,7 @@ export function Projects() {
                         alt=""
                         fill
                         sizes="(max-width: 768px) 100vw, 32vw"
-                        className={cn("object-cover opacity-75 transition duration-500 group-hover:scale-105", isWarm && "object-top opacity-90")}
+                        className={cn("object-contain object-center opacity-82 transition duration-500", isWarm && "object-top opacity-90")}
                       />
                       <div
                         className={cn(
@@ -212,7 +212,6 @@ export function Projects() {
 
 function ProjectShowcaseModal({project, onClose}: {project: Project; onClose: () => void}) {
   const images = project.showcaseImages?.length ? project.showcaseImages : project.gallery;
-  const labels = project.showcaseLabels ?? ["Главный экран", "Структура", "Визуальная подача", "Финальный экран"];
   const modalRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -318,7 +317,7 @@ function ProjectShowcaseModal({project, onClose}: {project: Project; onClose: ()
             <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 z-10 h-20 bg-gradient-to-b from-[#07070b] to-transparent" />
             <div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-24 bg-gradient-to-t from-[#07070b] to-transparent" />
             <div className="no-scrollbar h-full overflow-y-auto scroll-smooth px-4 py-14 sm:px-8 lg:px-12" data-lenis-prevent>
-              <div className="mx-auto max-w-[920px] space-y-16 sm:space-y-20">
+              <div className="mx-auto max-w-[920px] space-y-10 sm:space-y-12">
                 {images.map((src, imageIndex) => (
                   <figure
                     key={src}
@@ -328,10 +327,6 @@ function ProjectShowcaseModal({project, onClose}: {project: Project; onClose: ()
                       imageIndex % 3 === 2 && "lg:ml-auto lg:max-w-[92%]",
                     )}
                   >
-                    <figcaption className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.24em] text-sakura/90">
-                      <span className="h-px w-12 bg-gradient-to-r from-sakura to-transparent" />
-                      {labels[imageIndex] ?? `Раздел ${imageIndex + 1}`}
-                    </figcaption>
                     <div
                       className={cn(
                         "overflow-hidden rounded-[1rem] border border-white/10 bg-black/28 p-2 shadow-[0_30px_130px_rgba(0,0,0,0.46),0_0_70px_rgba(255,112,166,0.11)] backdrop-blur-xl transition duration-500 group-hover:border-sakura/34 group-hover:shadow-[0_34px_150px_rgba(0,0,0,0.52),0_0_92px_rgba(255,112,166,0.16)]",

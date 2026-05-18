@@ -8,7 +8,7 @@ import {useEffect} from "react";
 export function ClientMotion() {
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.18,
+      duration: 0.82,
       smoothWheel: true,
       wheelMultiplier: 0.9,
     });
@@ -32,12 +32,11 @@ export function ClientMotion() {
     sections.forEach((section) => {
       gsap.fromTo(
         section,
-        {autoAlpha: 0, y: 44, filter: "blur(10px)"},
+        {autoAlpha: 0, y: 28},
         {
           autoAlpha: 1,
           y: 0,
-          filter: "blur(0px)",
-          duration: 1.1,
+          duration: 0.72,
           ease: "power3.out",
           scrollTrigger: {
             trigger: section,
