@@ -1,4 +1,4 @@
-import {introCards} from "@/data/site";
+import {introCards, telegramUrl} from "@/data/site";
 import {IconBadge} from "@/components/ui/IconBadge";
 import {cn} from "@/lib/utils";
 
@@ -51,10 +51,19 @@ export function Intro() {
                       </span>
                     ))}
                   </div>
-                  <div className={cn("mt-6 flex min-h-11 items-center justify-between border px-4 text-sm text-bone", pinkUiClass)}>
-                    Запустить проект
+                  <a
+                    href={telegramUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Обсудить запуск проекта в Telegram"
+                    className={cn(
+                      "mt-6 flex min-h-12 items-center justify-between border px-4 text-sm font-medium text-bone transition duration-300 hover:-translate-y-1 hover:border-sakura/55 hover:bg-sakura/[0.12]",
+                      pinkUiClass,
+                    )}
+                  >
+                    <span>Обсудить запуск</span>
                     <span className="text-2xl leading-none text-sakura">→</span>
-                  </div>
+                  </a>
                 </div>
               ) : null}
 

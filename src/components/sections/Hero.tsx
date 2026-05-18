@@ -50,7 +50,7 @@ export function Hero() {
               подачу, структуру и сильное первое впечатление.
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-              <ButtonLink href={telegramUrl}>Смотреть проекты</ButtonLink>
+              <ButtonLink href="#projects">Смотреть проекты</ButtonLink>
               <ButtonLink href={telegramUrl} variant="ghost" icon="send">
                 Написать в Telegram
               </ButtonLink>

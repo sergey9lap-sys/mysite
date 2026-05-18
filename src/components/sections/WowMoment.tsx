@@ -32,7 +32,7 @@ export function WowMoment() {
             как человек начинает читать текст.
           </p>
           <div className="mt-7 flex">
-            <ButtonLink href={telegramUrl} variant="ghost">
+            <ButtonLink href="#projects" variant="ghost">
               Перейти к проектам
             </ButtonLink>
           </div>
@@ -90,7 +90,9 @@ export function WowMoment() {
             Чёткая структура
           </div>
 
-          <div className={`absolute bottom-[18%] right-[3%] flex items-center gap-3 border px-5 py-4 text-lg text-bone ${pinkUiClass}`}>
+          <div
+            className={`absolute bottom-[8%] left-0 right-0 mx-auto flex w-fit max-w-[calc(100%-2rem)] items-center justify-center gap-3 border px-5 py-4 text-base text-bone sm:bottom-[18%] sm:left-auto sm:right-[3%] sm:mx-0 sm:max-w-none sm:text-lg ${pinkUiClass}`}
+          >
             <Check size={20} className="text-sakura" />
             Сильное первое впечатление
           </div>
